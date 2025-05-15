@@ -26,7 +26,7 @@ app.post("/create-payment-intent", async (req, res) => {
             amount,
             currency: "inr",
             customer: customer.id,
-            payment_method_types: ["card"],
+            payment_method_types: ["card", "upi"],
         });
 
         res.status(200).json({
